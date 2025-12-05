@@ -1,0 +1,132 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ background-image:url(Lucid_Origin_Generate_a_visually_stunning_realistic_image_of_a_2.jpg);
+  
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.todo-container {
+   background: linear-gradient(45deg, rgb(4, 4, 5), rgb(126, 48, 133));
+  width: 380px;
+  height: 450px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgb(71, 77, 134);
+  transition: transform 0.2s ease-in-out; 
+}
+
+.todo-container:hover {
+  transform: scale(1.01);
+}
+
+h2 {
+  text-align: center;
+  color: whitesmoke;
+  margin-bottom: 20px;
+  font-size: 26px;
+
+  background: rgb(15, 15, 32);       /* Background sheet */
+  padding: 15px 40px;                /* Sheet size */
+  box-shadow: 0 0 30px rgb(71, 77, 134);  /* Shadow */
+
+  width: fit-content;                /* Auto size */
+  margin: 0 auto;                    /* Center in page */
+  border-radius: 10px;               /* Smooth edges */
+}
+
+
+#taskInput {
+  width: 91%;
+  padding: 12px;
+  margin-top: 10px ;
+  margin-right: 5px;
+  border: 2px solid #a0c4ff;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+#taskInput:focus {
+  border-color: #5e60ce;
+}
+
+#addBtn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #5f0a87, #a4508b);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  animation: slideUp 0.8s ease forwards;
+}
+@keyframes slideUp {
+  0% {
+    transform: translateY(50px);   /* Niche */
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);      /* Original position */
+    opacity: 1;
+  }
+}
+
+#addBtn:hover {
+  background: linear-gradient(to right, #a4508b, #5f0a87);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  background: #f1f3f5;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+li:hover {
+  background: #e2e6ea;
+}
+
+li span {
+  flex-grow: 1;
+  margin-left: 12px;
+  font-size: 16px;
+  color: #333;
+}
+
+li.completed span {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.deleteBtn {
+  background-color: transparent;
+  border: none;
+  color: #ff4d4d;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.checkbox {
+  transform: scale(1.2);
+  accent-color: #5f0a87;
+  cursor: pointer;
+}
